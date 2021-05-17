@@ -6,6 +6,7 @@ const GlobalStyle = createGlobalStyle`
   
   html,
   body {
+    font-family: 'Noto Serif KR';
     font-size: 10px;
     padding-left: 17.3vw;
     padding-right: 17.3vw;
