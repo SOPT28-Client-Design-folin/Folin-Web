@@ -1,7 +1,14 @@
 import React from "react";
+import Router from "./components/Router";
+import GlobalStyles from "./assets/styles/GlobalStyles";
 
 function App() {
-  return <h3>Fol-in</h3>;
+  return (
+    <>
+      <Router />
+      <GlobalStyles />
+    </>
+  );
 }
 
 export default App;
