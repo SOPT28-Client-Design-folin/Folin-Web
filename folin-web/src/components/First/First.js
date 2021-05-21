@@ -1,6 +1,4 @@
 import React from "react";
-import Up from "../First/Up";
-import Down from "../First/Down";
 import Styled from "styled-components";
 import Slider from "../First/Up/Slider";
 import Story from "../First/Up/Story";

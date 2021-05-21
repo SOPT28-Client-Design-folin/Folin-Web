@@ -3,17 +3,33 @@ import Styled from "styled-components";
 import LeftArrow from "../../../assets/icons/leftArrowBtn.svg";
 import RightArrow from "../../../assets/icons/rightArrow.svg";
 
-const TopWrapper = Styled.div`
+const Wrapper = Styled.div`
   height: 60vh;
+  margin-top: 0;
+  padding-top: 0;
   width: 85%;
-  padding-top: 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  .button__right {
+    all: unset;
+    margin-left: 1.5rem;
+    margin-bottom: 7rem;
+  }
+  .button__left {
+    all: unset;
+    margin-right: 1.5rem;
+    margin-bottom: 7rem;
+  }
+`;
+const ContentWrapper = Styled.div`
+  height: 100%;
+  width: 100%;
   .top {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    &__image{
-    }
     &__content{
       width: 40%;
       display: flex;
@@ -58,68 +74,70 @@ const TopWrapper = Styled.div`
   }
 `;
 
-const ButtonWrapper = Styled.div`
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 3rem;
-  padding-top: 1rem;
-  .btn {
-    margin: 0.5rem;
-    width: 1rem;
-    height: 1rem;
-    border: none;
-    border-radius: 50%;
-  }
-`;
-
 const Slider = () => {
   return (
-    <TopWrapper>
-      <div className='top'>
-        <div className='top__image'>
-          <img className='top__image--icon' src={LeftArrow} alt='leftArrow' />
-        </div>
-        <div className='top__image'>
-          <img
-            className='top__image--image'
-            src='http://placekitten.com/440/300'
-            alt='cat'
-          />
-          <ButtonWrapper>
-            <button className='btn'></button>
-            <button className='btn'></button>
-            <button className='btn'></button>
-          </ButtonWrapper>
-        </div>
-        <div className='top__content'>
-          <div className='top__content--title'>지금 읽어 두면 좋은 콘텐츠</div>
-          <div className='top__content--toptext'>
-            애니콜 디자이너가 <br />
-            나이키 ·MS로 뻗어나간 비결
+    <Wrapper>
+      <button className='button__left'>
+        <img src={LeftArrow} alt='leftArrow' />
+      </button>
+      <ContentWrapper>
+        <div className='top'>
+          <div className='top__image'>
+            <img
+              className='top__image--image'
+              src='https://placeimg.com/500/350/tech'
+              alt='cat'
+            />
           </div>
-          <div className='top__content--middletext'>
-            글로벌 기업을 무대로 활약해 온 유영규 디자이너는
-            <br /> '한국 디자인계의 빛나는 성취'라고 불립니다. 아이리버, 나이키
-            시계 '베이퍼', 마이크로소프트 홀로렌즈가 모두 그의 작품입니다.
-            유영규 디자이너의 디자인에는 어떤 가치가 담겨 있을까요?
-          </div>
-          <div className='top__content--bottomtext'>
-            <p className='top__content--bottomtext--color'>
-              라이프스타일 커리어
-            </p>
-            | 유영규 박지호
+          <div className='top__content'>
+            <div className='top__content--title'>
+              지금 읽어 두면 좋은 콘텐츠
+            </div>
+            <div className='top__content--toptext'>
+              애니콜 디자이너가 <br />
+              나이키 ·MS로 뻗어나간 비결
+            </div>
+            <div className='top__content--middletext'>
+              글로벌 기업을 무대로 활약해 온 유영규 디자이너는
+              <br /> '한국 디자인계의 빛나는 성취'라고 불립니다. 아이리버,
+              나이키 시계 '베이퍼', 마이크로소프트 홀로렌즈가 모두 그의
+              작품입니다. 유영규 디자이너의 디자인에는 어떤 가치가 담겨
+              있을까요?
+            </div>
+            <div className='top__content--bottomtext'>
+              <p className='top__content--bottomtext--color'>
+                라이프스타일 커리어
+              </p>
+              | 유영규 박지호
+            </div>
           </div>
         </div>
-        <div className='bottom'>
-          <img
-            className='bottom__image--icon'
-            src={RightArrow}
-            alt='RightArrow'
-          />
-        </div>
-      </div>
-    </TopWrapper>
+      </ContentWrapper>
+      <button className='button__right'>
+        <img src={RightArrow} alt='RightArrow' />
+      </button>
+    </Wrapper>
   );
 };
 
 export default Slider;
+
+// <ButtonWrapper>
+//   <button className='btn'></button>
+//   <button className='btn'></button>
+//   <button className='btn'></button>
+// </ButtonWrapper>
+
+// const ButtonWrapper = Styled.div`
+//   display: flex;
+//   justify-content: flex-end;
+//   margin-right: 3rem;
+//   padding-top: 1rem;
+//   .btn {
+//     margin: 0.5rem;
+//     width: 1rem;
+//     height: 1rem;
+//     border: none;
+//     border-radius: 50%;
+//   }
+// `;
