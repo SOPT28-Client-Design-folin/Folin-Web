@@ -8,32 +8,33 @@ const UpHeader = styled.header`
   top: -10vh;
   left: 0;
   width: 100%;
-  height: 28vh;
+  height: 20vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: ${(props) => props.theme.colorEmerald};
   color: ${(props) => props.theme.textWhite};
-
+  z-index: 1;
   font-size: 16px;
 `;
 
 const DownHeader = styled.header`
   position: fixed;
-  top: 20vh;
+  top: 10vh;
   left: 0;
   width: 100%;
-  height: 25vh;
+  height: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1;
   color: ${(props) => props.theme.textBlack};
 `;
 
 const List = styled.ul`
   width: 70vw;
   display: flex;
-  padding-top: 2.8rem;
+  padding-top: 7rem;
   align-items: center;
 `;
 
@@ -61,9 +62,7 @@ const DItem = styled.li`
   padding-top: ${(props) => (props.current ? "0" : "0.5rem")};
   margin-right: 8rem;
   color: ${(props) => props.theme.textBlack};
-  height: 3rem
-  display: table-cell;
-  vertical-align: middle;
+  height: 3rem;
 `;
 
 const SearchUser = styled.p`
