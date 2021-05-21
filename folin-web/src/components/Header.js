@@ -20,7 +20,8 @@ const UpHeader = styled.header`
 
 const DownHeader = styled.header`
   position: fixed;
-  top: 9vh;
+  background-color: ${(props) => props.theme.textWhite};
+  top: 8vh;
   left: 0;
   width: 100%;
   height: 10vh;
