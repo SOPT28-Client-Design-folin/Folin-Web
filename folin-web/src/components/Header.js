@@ -61,7 +61,7 @@ font-family: "Nanum Myeongjo";
   padding-top: ${(props) => (props.current ? "0" : "0.5rem")};
   margin-right: 8rem;
   color: ${(props) => props.theme.textBlack};
-  height: 3rem
+  height: 3rem;
   display: table-cell;
   vertical-align: middle;
 `;
