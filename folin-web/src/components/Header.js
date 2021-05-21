@@ -8,7 +8,7 @@ const UpHeader = styled.header`
   top: -10vh;
   left: 0;
   width: 100%;
-  height: 20vh;
+  height: 18vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,7 +20,7 @@ const UpHeader = styled.header`
 
 const DownHeader = styled.header`
   position: fixed;
-  top: 10vh;
+  top: 9vh;
   left: 0;
   width: 100%;
   height: 10vh;
