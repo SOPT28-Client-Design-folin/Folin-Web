@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import ThemeStoryCard from "./Down/ThemeStoryCard";
+import TopTenCard from "./Down/TopTenCard";
 
 const Wrapper = styled.div`
   position: relative;
@@ -46,6 +47,7 @@ const Wrapper = styled.div`
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
+      align-content: flex-start;
     }
 
     button {
@@ -92,6 +94,47 @@ const Wrapper = styled.div`
       }
     }
   }
+
+  .topTen {
+    &__title {
+      font-family: Noto Sans KR;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 52px;
+      letter-spacing: -0.07em;
+      color: #00554a;
+    }
+
+    &__subtitle {
+      font-family: Noto Sans KR;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 26px;
+      /* identical to box height */
+
+      letter-spacing: -0.03em;
+
+      color: #636363;
+    }
+
+    &__itemContainer {
+      margin-top: 60px;
+      margin-left: 50px;
+    }
+
+    &__items {
+      display: flex;
+      flex-direction: column;
+      height: 600px;
+      flex-wrap: wrap;
+
+      li {
+        margin-bottom: 43px;
+      }
+    }
+  }
 `;
 
 const Down = ({ props }) => {
@@ -107,6 +150,13 @@ const Down = ({ props }) => {
         </div>
         <button class="themeStory__prevButton"></button>
         <button class="themeStory__nextButton"></button>
+      </div>
+      <div class="topTen">
+        <h2 class="topTen__title">폴인 인기 Top 10</h2>
+        <h3 class="topTen__subtitle">멤버십 회원들이 많이 본 요즘 직장인 대세 콘텐츠!</h3>
+        <div className="topTen__itemContainer">
+          <ul class="topTen__items">{props && props.map((item, index) => <TopTenCard props={item} />)}</ul>
+        </div>
       </div>
     </Wrapper>
   );
