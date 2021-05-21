@@ -1,7 +1,6 @@
 import React from "react";
-import styled from "styled-components";
 import { withRouter } from "react-router-dom";
-import Logo from "../assets/icons/alarmBtn.svg";
+import styled from "styled-components";
 
 const UpHeader = styled.header`
   position: fixed;
@@ -54,7 +53,7 @@ const DList = styled.ul`
 `;
 
 const DItem = styled.li`
-font-family: "Nanum Myeongjo";
+  font-family: "Nanum Myeongjo";
   font-weight: 700;
   text-align: center;
   font-size: ${(props) => (props.current ? "3rem" : "2rem")};
