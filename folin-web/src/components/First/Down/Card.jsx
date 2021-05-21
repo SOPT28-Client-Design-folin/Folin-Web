@@ -127,7 +127,7 @@ const Card = ({ props }) => {
           <ul className="card__categories">
             {props.categories &&
               props.categories.map((item, index) => {
-                return <li>{item}</li>;
+                return <li key={index}>{item}</li>;
               })}
           </ul>
           <div className="card__title">{props.title}</div>
