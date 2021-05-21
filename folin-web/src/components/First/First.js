@@ -1,6 +1,6 @@
 import React from "react";
 import Styled from "styled-components";
-import Slider from "../First/Up/Slider";
+import Slider from "./Up/Slider/Slider";
 import Story from "../First/Up/Story";
 import Keyword from "../First/Up/Keyword";
 
