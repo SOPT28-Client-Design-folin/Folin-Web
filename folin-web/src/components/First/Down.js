@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import Card from "./Down/Card";
+import ThemeStoryCard from "./Down/ThemeStoryCard";
 
 const Wrapper = styled.div`
-  .down {
-    position: relative;
-    width: 1200px;
-    margin: 0 auto;
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
 
+  .themeStory {
     &__title {
       font-family: "Noto Sans KR";
       font-style: normal;
@@ -97,14 +97,16 @@ const Wrapper = styled.div`
 const Down = ({ props }) => {
   return (
     <Wrapper>
-      <div class="down">
-        <h2 class="down__title">테마가 있는 스토리</h2>
-        <h3 class="down__subtitle">일하는 방식을 실험하는 브랜드, 모베리웍스</h3>
-        <div class="down__itemContainer">
-          <ul class="down__items">{props && props.map((item) => <Card key={item.id} props={item} />)}</ul>
+      <div class="themeStory">
+        <h2 class="themeStory__title">테마가 있는 스토리</h2>
+        <h3 class="themeStory__subtitle">일하는 방식을 실험하는 브랜드, 모베리웍스</h3>
+        <div class="themeStory__itemContainer">
+          <ul class="themeStory__items">
+            {props && props.map((item) => <ThemeStoryCard key={item.id} props={item} />)}
+          </ul>
         </div>
-        <button class="down__prevButton"></button>
-        <button class="down__nextButton"></button>
+        <button class="themeStory__prevButton"></button>
+        <button class="themeStory__nextButton"></button>
       </div>
     </Wrapper>
   );
