@@ -140,6 +140,21 @@ const DownWrap = Styled.div`
         }
     }
 
+    @media (max-width: 1000px) {
+        width: 87.9rem;
+        margin-left: -44.0rem;
+        margin-top: 110.0rem;
+        padding-bottom: 12.0rem;
+
+        .left {
+            width: 25.0rem;
+        }
+
+        .right {
+            width: 25.0rem;
+        }
+    }
+
 `;
 
 const SecondDown = () => {
