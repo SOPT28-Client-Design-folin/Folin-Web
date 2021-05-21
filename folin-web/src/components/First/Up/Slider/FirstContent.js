@@ -10,7 +10,7 @@ const ContentWrapper = Styled.div`
     justify-content: space-between;
     align-items: center;
     &__content{
-      width: 40%;
+      width: 60%;
       display: flex;
       flex-direction: column;
       justify-content: center;
