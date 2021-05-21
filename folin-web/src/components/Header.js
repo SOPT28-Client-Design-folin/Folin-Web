@@ -19,7 +19,6 @@ const UpHeader = styled.header`
 `;
 
 const DownHeader = styled.header`
-  color: white;
   position: fixed;
   top: 58px;
   left: 0;
@@ -28,6 +27,8 @@ const DownHeader = styled.header`
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 10;
+  background-color: white;
   color: ${(props) => props.theme.textBlack};
 `;
 
