@@ -1,7 +1,7 @@
 import React from "react";
-import styled from "styled-components";
 import { withRouter } from "react-router-dom";
 import SearchBtn from "../assets/icons/searchBtn.svg";
+import styled from "styled-components";
 
 const UpHeader = styled.header`
   position: fixed;
@@ -64,6 +64,8 @@ const DItem = styled.li`
   margin-right: 8rem;
   color: ${(props) => props.theme.textBlack};
   height: 3rem;
+  display: table-cell;
+  vertical-align: middle;
 `;
 
 const SearchUser = styled.p`
