@@ -9,7 +9,7 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'Noto Serif KR';
     box-sizing: border-box;
     font-size: 10px;
-    padding-left: 17.3vw;
+    //padding-left: 17.3vw;
     padding-right: 17.3vw;
 
   @media (max-width: 1200px) {
