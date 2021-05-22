@@ -10,11 +10,11 @@ const DownWrap = Styled.div`
     height: 41.4rem;
     display: flex;
     justify-content: space-between;
-    position: absolute;
+    position: relative;
     left: 50%;
     margin-left: -60.0rem;
-    margin-top: 110.0rem;
     padding-bottom: 12.0rem;
+    bottom: 0;
 
     .left {
         width: 35.9rem;
@@ -190,8 +190,6 @@ const SecondDown = () => {
                     <img className="right__action--arrow" src={icLeftArrow} alt=""></img>
                     <img className="right__action--arrow" src={icRightArrow} alt=""></img>
                 </div>
-                
-                
             </div>
         </DownWrap>
     );

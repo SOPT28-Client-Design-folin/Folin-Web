@@ -6,13 +6,13 @@ import BannerImageRight from '../../assets/icons/dummyImg2.jpg';
 const SecondUpWrap = Styled.div`
     .banner {
         width: 119.9rem;
-        height: 49.5rem;
+        height: 15vh;
         display: flex;
         align-items: center;
-        position: absolute;
+        position: relative;
         left: 50%;
         margin-left: -59.95rem;
-        margin-top: 17.7rem;
+        top: 20vh;
 
         &__left {
             width: 43.1rem;
