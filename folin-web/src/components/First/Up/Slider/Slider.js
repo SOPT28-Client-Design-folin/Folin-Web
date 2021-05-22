@@ -89,23 +89,3 @@ const Slider = () => {
 };
 
 export default Slider;
-
-// <ButtonWrapper>
-//   <button className='btn'></button>
-//   <button className='btn'></button>
-//   <button className='btn'></button>
-// </ButtonWrapper>
-
-// const ButtonWrapper = Styled.div`
-//   display: flex;
-//   justify-content: flex-end;
-//   margin-right: 3rem;
-//   padding-top: 1rem;
-//   .btn {
-//     margin: 0.5rem;
-//     width: 1rem;
-//     height: 1rem;
-//     border: none;
-//     border-radius: 50%;
-//   }
-// `;
