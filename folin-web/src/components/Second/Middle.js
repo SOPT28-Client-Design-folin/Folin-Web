@@ -164,6 +164,7 @@ const Middle = () => {
           </div>
         </div>
         <div className="row">
+          <div className="seminars__cards">
             <div className="seminar__card" >
               <img src={ComponentOne}/>
             </div>
@@ -176,19 +177,22 @@ const Middle = () => {
             <div className="seminar__card" >
               <img src={ComponentFour}/>
             </div>
+          </div>
         </div>
         <div className="row">
-            <div className="seminar__card" >
-              <img src={ComponentFive}/>
-            </div>
-            <div className="seminar__card" >
-              <img src={ComponentSix}/>
-            </div>
-            <div className="seminar__card" >
-              <img src={ComponentSeven}/>
-            </div>
-            <div className="seminar__card" >
-              <img src={ComponentEight}/>
+          <div className="seminars__cards">
+              <div className="seminar__card" >
+                <img src={ComponentFive}/>
+              </div>
+              <div className="seminar__card" >
+                <img src={ComponentSix}/>
+              </div>
+              <div className="seminar__card" >
+                <img src={ComponentSeven}/>
+              </div>
+              <div className="seminar__card" >
+                <img src={ComponentEight}/>
+              </div>
             </div>
         </div>
         <div className="seminars__speard--btn">
