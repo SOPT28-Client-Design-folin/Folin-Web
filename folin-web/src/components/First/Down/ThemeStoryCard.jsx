@@ -59,13 +59,13 @@ const Wrapper = styled.li`
     }
 
     &__title {
-      font-family: "Noto Serif KR";
-      font-weight: 400;
       font-size: 21px;
       color: #2d2a26;
       max-height: 56px;
       line-height: 26px;
       letter-spacing: -0.05em;
+      font-family: "NanumMyeongjo";
+      font-weight: 700;
     }
 
     &__publisher {
@@ -123,29 +123,29 @@ const Wrapper = styled.li`
 const ThemeStoryCard = ({ props }) => {
   return (
     <Wrapper>
-      <a className="card" href={props.link}>
-        <div className="card__image">
-          <img src={props.img} alt="" />
+      <a className='card' href={props.link}>
+        <div className='card__image'>
+          <img src={props.img} alt='' />
         </div>
-        <div className="card__cardInfo">
-          <ul className="card__categories">
+        <div className='card__cardInfo'>
+          <ul className='card__categories'>
             {props.categories &&
               props.categories.map((item, index) => {
                 return <li key={index}>{item}</li>;
               })}
           </ul>
-          <div className="card__title">{props.title}</div>
-          <div className="card__publisher">{props.publisher}</div>
+          <div className='card__title'>{props.title}</div>
+          <div className='card__publisher'>{props.publisher}</div>
         </div>
       </a>
-      <div className="bottom">
-        <div className="bottom__status">{props.status}</div>
-        <div className="bottom__icons">
-          <div className="bottom__heart">
-            <img src={HeartUnclickedBtnIcon} alt="" />
+      <div className='bottom'>
+        <div className='bottom__status'>{props.status}</div>
+        <div className='bottom__icons'>
+          <div className='bottom__heart'>
+            <img src={HeartUnclickedBtnIcon} alt='' />
           </div>
-          <div className="bottom__bookmark">
-            <img src={BookmarkUnclickedBtnIcon} alt="" />
+          <div className='bottom__bookmark'>
+            <img src={BookmarkUnclickedBtnIcon} alt='' />
           </div>
         </div>
       </div>
