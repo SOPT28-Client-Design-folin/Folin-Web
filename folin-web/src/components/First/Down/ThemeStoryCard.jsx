@@ -7,6 +7,7 @@ const Wrapper = styled.li`
   height: 407px;
   padding-bottom: 40px;
   margin-right: 24px;
+  margin-bottom: 20px;
   position: relative;
   width: 284px;
 
