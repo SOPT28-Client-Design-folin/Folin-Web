@@ -1,54 +1,54 @@
 @font-face {
   font-family: "Noto Serif KR";
   font-weight: 400;
-  src: url("../fonts/NotoSerifCJKkr-Regular.otf") format("otf");
+  src: url("./NotoSerifCJKkr-Regular.otf") format("otf");
 }
 
 @font-face {
   font-family: "Noto Serif KR";
   font-weight: 700;
-  src: url("../fonts/NotoSerifCJKkr-Bold.otf") format("otf");
+  src: url("./NotoSansCJKkr-Bold.otf") format("otf");
 }
 
 @font-face {
   font-family: "Noto Sans KR";
   font-weight: 400;
-  src: url("../fonts/NotoSansCJKkr-Regular.otf") format("otf");
+  src: url("./NotoSansCJKkr-Regular.otf") format("otf");
 }
 
 @font-face {
   font-family: "Noto Sans KR";
   font-weight: 500;
-  src: url("../fonts/NotoSansCJKkr-Medium.otf") format("otf");
+  src: url("./NotoSansCJKkr-Medium.otf") format("otf");
 }
 
 @font-face {
   font-family: "Noto Sans KR";
   font-weight: 700;
-  src: url("../fonts/NotoSansCJKkr-Bold.otf") format("otf");
+  src: url("./NotoSansCJKkr-Bold.otf") format("otf");
 }
 
 @font-face {
   font-family: "Nanum Myeongjo";
   font-weight: 400;
-  src: url("../fonts/NanumMyeongjo.otf") format("otf");
+  src: url("./NanumMyeongjo.otf") format("otf");
 }
 
 @font-face {
   font-family: "Nanum Myeongjo";
   font-weight: 700;
-  src: url("../fonts/NanumMyeongjoBold.otf") format("otf");
+  src: url("./NanumMyeongjoBold.otf") format("otf");
 }
 
 /* window 용이라는데 사실 잘 모르겠.. */
 @font-face {
   font-family: "Nanum Myeongjo";
   font-weight: 701;
-  src: url("../fonts/NanumMyeongjoBoldwindow.otf") format("otf");
+  src: url("./NanumMyeongjoBoldwindow.otf") format("otf");
 }
 
 @font-face {
   font-family: "Nanum Myeongjo";
   font-weight: 900;
-  src: url("../fonts/NanumMyeongjoExtraBold.otf") format("otf");
+  src: url("./NanumMyeongjoExtraBold.otf") format("otf");
 }

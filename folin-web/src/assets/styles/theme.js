@@ -10,7 +10,7 @@ const text = {
   textGray1: "#595959",
   textGray2: "#9D9D9D",
   textWhite: "#FFFFFF",
-  textGreen: "#00564A",
+  textGreen: "#1E9285",
 };
 
 const theme = {
