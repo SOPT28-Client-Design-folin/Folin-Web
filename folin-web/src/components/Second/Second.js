@@ -1,13 +1,7 @@
 import React,{useState} from 'react';
 import styled from "styled-components";
-import ComponentOne from "../../assets/component/ComponentOne.png";
-import ComponentTwo from "../../assets/component/ComponentTwo.png";
-import ComponentThree from "../../assets/component/ComponentThree.png";
-import ComponentFour from "../../assets/component/ComponentFour.png";
-import ComponentFive from "../../assets/component/ComponentFive.png";
-import ComponentSix from "../../assets/component/ComponentSix.png";
-import ComponentSeven from "../../assets/component/ComponentSeven.png";
-import ComponentEight from "../../assets/component/ComponentEight.png";
+import Data from '../../data.js';
+import Rectangle from "../../assets/component/Rectangle 49.png";
 import DownArrowBtn from "../../assets/icons/downArrowBtn.svg";
 
 const SecondWrap = styled.div`
@@ -79,8 +73,7 @@ const SecondWrap = styled.div`
     &__category {
 
       padding-top:30px;
-
-
+      padding-bottom:30px;
 
       &--btn {
         border: 1px solid #bdbdbd;
@@ -91,7 +84,7 @@ const SecondWrap = styled.div`
         color: #bdbdbd;
         margin: 0 0.3rem;
         display: inline-block;
-        
+        cursor:pointer;
       }
 
       &--btn--point {
@@ -103,6 +96,7 @@ const SecondWrap = styled.div`
         color: black;
         margin: 0 0.3rem;
         display: inline-block;
+        cursor:pointer;
       }
 
 
@@ -118,12 +112,41 @@ const SecondWrap = styled.div`
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
+      
     }
 
   }
+  .row{
+    width:110rem!important;
+    padding-left:60px;
+  }
+  .seminar__cards{
+    display: inline-block;
+    width: 270px;
+  }
+  .seminar__contents{
+    min-height: 260px;
+  }
   .seminar__card{
-  
       margin: 25px;
+    }
+
+  }
+  .row{
+    width:110rem!important;
+    padding-left:60px;
+  }
+  .seminar__cards{
+    display: inline-block;
+    width: 270px;
+  }
+  .seminar__contents{
+    min-height: 260px;
+  }
+  .seminar__card{
+      margin: 20px;
+      width: 239px;
+      height: 368px;
   }
 
   .seminars__speard--btn{
@@ -133,24 +156,81 @@ const SecondWrap = styled.div`
     line-height: 25px;
     letter-spacing: -0.07em;
     color: #878787;
+    cursor:pointer;
   }
+  .card{
+    font-family: Noto Serif KR;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    width:75%;
+    line-height: 117%;
+    letter-spacing: -0.025em;
+    color: #2D2A26;
+    padding-top:20px;
+    min-height: 57px;
 
-
+    &__author{
+      font-family: Noto Sans KR;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 17px;
+      letter-spacing: -0.07em;
+      color: #595959;
+    }
+    &__general{
+      padding-top: 14px;
+      font-family: Noto Sans KR;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 17px;
+      letter-spacing: -0.07em;
+      color: #595959;
+      min-height: 16.8px;
+    }
+    &__membership{
+      font-family: Noto Sans KR;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 17px;
+      letter-spacing: -0.07em;
+      color: #00554A;
+      padding-top:5px;
+      padding-bottom : 16px;
+      min-height: 16.8px;
+    }
+    &__type{
+      font-family: Noto Sans KR;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 19px;
+      text-align: center;
+      padding: 12px 90px;
+      cursor:pointer;
+      letter-spacing: -0.03em;
+      color: #2D2A26;
+      background: #FFFFFF;
+      border: 1px solid #2D2A26;
+      box-sizing: border-box;
+      border-radius: 45px;
+      margin-bottom:66px;
+    }
+  }
 `;
 
 const Second = () => {
-
+  let [books,setBooks] = useState(Data);
     return (
     <SecondWrap>
       <section className="seminars">
-
-      
         <div className="seminars__total">
           <div className="seminars__left">폴인 세미나</div>
           <div className="seminars__right">링커클럽</div>
         </div>
-
-
         <div className="seminars__category">
           <h2 className="seminars__title">폴인세미나,</h2>
           <br/><h2 className="seminars__sub_title">프렌드를 읽는 가장 생생한 모임</h2>
@@ -161,32 +241,12 @@ const Second = () => {
           </div>
         </div>
         <div class="row">
-            <div className="seminar__card" >
-              <img src={ComponentOne}/>
-            </div>
-            <div className="seminar__card" >
-              <img src={ComponentTwo}/>
-            </div>
-            <div className="seminar__card" >
-              <img src={ComponentThree}/>
-            </div>
-            <div className="seminar__card" >
-              <img src={ComponentFour}/>
-            </div>
-        </div>
-        <div class="row">
-            <div className="seminar__card" >
-              <img src={ComponentFive}/>
-            </div>
-            <div className="seminar__card" >
-              <img src={ComponentSix}/>
-            </div>
-            <div className="seminar__card" >
-              <img src={ComponentSeven}/>
-            </div>
-            <div className="seminar__card" >
-              <img src={ComponentEight}/>
-            </div>
+            {
+              books.map( (a,i)=> {
+                return <Card books = {books[i]} i={i} />
+
+              })
+            }
         </div>
         <div className="seminars__speard--btn">
           펼치기
@@ -198,8 +258,21 @@ const Second = () => {
     );
 };
 
+function Card(props){
+  return(
 
-
+      <div className="seminar__cards">
+        <img src={Rectangle}/>
+        <div className="seminar__contents">
+          <h5 className="card">{props.books.title}</h5>
+          <div className="card__author">{props.books.author} {props.books.publisher}</div>
+          <p className="card__general">{props.books.general_price}</p>
+          <p className="card__membership">{props.books.membership_price}</p>
+          <button className="card__type">{props.books.type}</button>
+        </div>
+      </div>
+  )
+}
 
 export default Second;
 
