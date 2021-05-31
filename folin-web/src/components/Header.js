@@ -1,7 +1,7 @@
-import React from "react";
-import { withRouter } from "react-router-dom";
-import SearchBtn from "../assets/icons/searchBtn.svg";
-import styled from "styled-components";
+import React from 'react';
+import { withRouter } from 'react-router-dom';
+import styled from 'styled-components';
+import SearchBtn from '../assets/icons/searchBtn.svg';
 
 const UpHeader = styled.header`
   position: fixed;
@@ -42,9 +42,9 @@ const List = styled.ul`
 const Item = styled.li`
   display: table-cell;
   vertical-align: middle;
-  font-family: "Noto Sans KR";
+  font-family: 'Noto Sans KR';
   font-weight: 700;
-  font-size: ${(props) => (props.current ? "16px" : "12px")};
+  font-size: ${(props) => (props.current ? '16px' : '12px')};
   padding-right: 16px;
   color: ${(props) => props.theme.textWhite};
 `;
@@ -56,11 +56,11 @@ const DList = styled.ul`
 `;
 
 const DItem = styled.li`
-  font-family: "Nanum Myeongjo";
+  font-family: 'Noto Serif KR';
   font-weight: 700;
   text-align: center;
-  font-size: ${(props) => (props.current ? "3rem" : "2rem")};
-  padding-top: ${(props) => (props.current ? "0" : "0.5rem")};
+  font-size: ${(props) => (props.current ? '3rem' : '2rem')};
+  padding-top: ${(props) => (props.current ? '0' : '0.5rem')};
   margin-right: 8rem;
   color: ${(props) => props.theme.textBlack};
   height: 3rem;
@@ -84,9 +84,7 @@ const Header = () => {
       <UpHeader>
         <List>
           <Item current={true}>폴인멤버십</Item>
-          <Item current={false}>
-            오직 폴인에서만! 1천 여개 콘텐츠를 무제한으로!
-          </Item>
+          <Item current={false}>오직 폴인에서만! 1천 여개 콘텐츠를 무제한으로!</Item>
         </List>
       </UpHeader>
       <DownHeader>
@@ -97,7 +95,7 @@ const Header = () => {
           <DItem current={false}>Study</DItem>
         </DList>
         <SearchUser>류진님</SearchUser>
-        <SearchImg src={SearchBtn} alt='' />
+        <SearchImg src={SearchBtn} alt="" />
       </DownHeader>
     </>
   );

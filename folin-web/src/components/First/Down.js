@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import ThemeStoryCard from "./Down/ThemeStoryCard";
-import TopTenCard from "./Down/TopTenCard";
+import React from 'react';
+import styled from 'styled-components';
+import ThemeStoryCard from './Down/ThemeStoryCard';
+import TopTenCard from './Down/TopTenCard';
 
 const Wrapper = styled.div`
   position: relative;
@@ -10,7 +10,7 @@ const Wrapper = styled.div`
 
   .themeStory {
     &__title {
-      font-family: "Noto Sans KR";
+      font-family: 'Noto Sans KR';
       font-style: normal;
       font-weight: bold;
       font-size: 36px;
@@ -21,9 +21,9 @@ const Wrapper = styled.div`
     }
 
     &__subtitle {
-      font-family: "Noto Serif KR";
+      font-family: 'Noto Serif KR';
       font-style: normal;
-      font-weight: normal;
+      font-weight: 400;
       font-size: 38px;
       line-height: 55px;
       color: #2d2a26;
@@ -61,7 +61,7 @@ const Wrapper = styled.div`
       cursor: pointer;
 
       :before {
-        content: "";
+        content: '';
         transform: rotate(45deg);
         display: inline-block;
         position: absolute;
@@ -140,33 +140,23 @@ const Wrapper = styled.div`
 const Down = ({ props }) => {
   return (
     <Wrapper>
-      <div className='themeStory'>
-        <h2 className='themeStory__title'>테마가 있는 스토리</h2>
-        <h3 className='themeStory__subtitle'>
-          일하는 방식을 실험하는 브랜드, 모베리웍스
-        </h3>
-        <div className='themeStory__itemContainer'>
-          <ul className='themeStory__items'>
-            {props &&
-              props.map((item) => (
-                <ThemeStoryCard key={item.id} props={item} />
-              ))}
+      <div className="themeStory">
+        <h2 className="themeStory__title">테마가 있는 스토리</h2>
+        <h3 className="themeStory__subtitle">일하는 방식을 실험하는 브랜드, 모베리웍스</h3>
+        <div className="themeStory__itemContainer">
+          <ul className="themeStory__items">
+            {props && props.map((item) => <ThemeStoryCard key={item.id} props={item} />)}
           </ul>
         </div>
-        <button className='themeStory__prevButton'></button>
-        <button className='themeStory__nextButton'></button>
+        <button className="themeStory__prevButton"></button>
+        <button className="themeStory__nextButton"></button>
       </div>
-      <div className='topTen'>
-        <h2 className='topTen__title'>폴인 인기 Top 10</h2>
-        <h3 className='topTen__subtitle'>
-          멤버십 회원들이 많이 본 요즘 직장인 대세 콘텐츠!
-        </h3>
-        <div className='topTen__itemContainer'>
-          <ul className='topTen__items'>
-            {props &&
-              props.map((item, index) => (
-                <TopTenCard key={index} props={item} />
-              ))}
+      <div className="topTen">
+        <h2 className="topTen__title">폴인 인기 Top 10</h2>
+        <h3 className="topTen__subtitle">멤버십 회원들이 많이 본 요즘 직장인 대세 콘텐츠!</h3>
+        <div className="topTen__itemContainer">
+          <ul className="topTen__items">
+            {props && props.map((item, index) => <TopTenCard key={index} props={item} />)}
           </ul>
         </div>
       </div>
