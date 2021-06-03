@@ -1,6 +1,6 @@
-import React,{useState} from 'react';
+import React, { useState } from "react";
 import styled from "styled-components";
-import Data from '../../data.js';
+import Data from "../../data.js";
 import Rectangle from "../../assets/component/Rectangle 49.png";
 import DownArrowBtn from "../../assets/icons/downArrowBtn.svg";
 
@@ -9,14 +9,11 @@ const SecondWrap = styled.div`
   font-weight: bold;
   font-size: 18px;
   position: relative;
-  top: 35vh;
-  height: 30%;
-
+  top: 34rem;
 
   .seminars{
     position: absolute;
     width: 100%;
-    top: 816px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -160,9 +157,18 @@ const SecondWrap = styled.div`
     padding-left:760px;
   }
 
+  .seminars__line{
+    width: 1000px;
+    height: 2px;
+    margin-top: 10rem;
+    background-color: #C1C1C1;
+  }
   .seminars__speard--btn{
-    padding-top:50px;
-    padding-bottom:80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80px;
+    height: 45px;
     font-size:17px;
     line-height: 25px;
     letter-spacing: -0.07em;
@@ -231,64 +237,60 @@ const SecondWrap = styled.div`
       margin-bottom:66px;
     }
 
-
 `;
 
 const Middle = () => {
-  let [books,setBooks] = useState(Data);
+  let [books, setBooks] = useState(Data);
 
-    return (
+  return (
     <SecondWrap>
-      <section className="seminars">
-        <div className="seminars__total">
-          <div className="seminars__left">폴인 세미나</div>
-          <div className="seminars__right">링커클럽</div>
+      <section className='seminars'>
+        <div className='seminars__total'>
+          <div className='seminars__left'>폴인 세미나</div>
+          <div className='seminars__right'>링커클럽</div>
         </div>
-        <div className="seminars__category">
-          <h2 className="seminars__title">폴인세미나,</h2>
-          <br/><h2 className="seminars__sub_title">프렌드를 읽는 가장 생생한 모임</h2>
-          <div className="seminars__btn">
-            <button className="seminars__category--btn--point">전체</button>
-            <button className="seminars__category--btn">신청가능모임</button>
-            <button className="seminars__category--btn">모임완료</button>
+        <div className='seminars__category'>
+          <h2 className='seminars__title'>폴인세미나,</h2>
+          <br />
+          <h2 className='seminars__sub_title'>
+            프렌드를 읽는 가장 생생한 모임
+          </h2>
+          <div className='seminars__btn'>
+            <button className='seminars__category--btn--point'>전체</button>
+            <button className='seminars__category--btn'>신청가능모임</button>
+            <button className='seminars__category--btn'>모임완료</button>
           </div>
         </div>
-        <div className="row">
-        {
-              books.map( (a,i)=> {
-                return <Card books = {books[i]} i={i} />
-
-              })
-        }
+        <div className='row'>
+          {books.map((a, i) => {
+            return <Card books={books[i]} key={i} />;
+          })}
         </div>
-        <div className="seminars__speard--btn">
-          펼치기
-          <img src={DownArrowBtn}/>
+        <div className='seminars__speard--btn'>
+          <div className='seminars__spread--btn--text'>펼치기</div>
+          <img src={DownArrowBtn} />
         </div>
+        <div className='seminars__line'></div>
       </section>
     </SecondWrap>
-
-    );
+  );
 };
 
-function Card(props){
-  return(
-
-      <div className="seminar__cards">
-        <img src={Rectangle}/>
-        <div className="seminar__contents">
-          <h5 className="card">{props.books.title}</h5>
-          <div className="card__author">{props.books.author} {props.books.publisher}</div>
-          <p className="card__general">{props.books.general_price}</p>
-          <p className="card__membership">{props.books.membership_price}</p>
-          <button className="card__type">{props.books.type}</button>
+function Card(props) {
+  return (
+    <div className='seminar__cards'>
+      <img src={Rectangle} />
+      <div className='seminar__contents'>
+        <h5 className='card'>{props.books.title}</h5>
+        <div className='card__author'>
+          {props.books.author} {props.books.publisher}
         </div>
+        <p className='card__general'>{props.books.general_price}</p>
+        <p className='card__membership'>{props.books.membership_price}</p>
+        <button className='card__type'>{props.books.type}</button>
       </div>
-  )
+    </div>
+  );
 }
 
-
-
-
 export default Middle;
-

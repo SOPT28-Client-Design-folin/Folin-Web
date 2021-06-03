@@ -1,18 +1,17 @@
-import React from 'react';
-import Styled from 'styled-components';
-import dummyImg from '../../assets/icons/dummyImg3.png';
-import icLeftArrow from '../../assets/icons/leftArrowBtn.svg';
-import icRightArrow from '../../assets/icons/rightArrow.svg';
+import React from "react";
+import Styled from "styled-components";
+import dummyImg from "../../assets/icons/dummyImg3.png";
+import icLeftArrow from "../../assets/icons/leftArrowBtn.svg";
+import icRightArrow from "../../assets/icons/rightArrow.svg";
 
 const DownWrap = Styled.div`
-
     width: 120.0rem;
     height: 41.4rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     position: relative;
-    left: 50%;
-    margin-left: -60.0rem;
+    top: 207rem;
+    left: 8rem;
     padding-bottom: 12.0rem;
     bottom: 0;
 
@@ -158,41 +157,45 @@ const DownWrap = Styled.div`
 `;
 
 const SecondDown = () => {
-    return (
-        <DownWrap>
-            <div className="left">
-                <p className="left__subTitle">함께 모여 나누는 인사이트</p>
-                <p className="left__mainTitle">폴인세미나 5월 라인업 미리보기</p>
-            </div>
-            <div className="center">
-                <img className="center__image" src={dummyImg}></img>
-            </div>
-            <div className="right">
-                <div className="right__description">
-                    <p className="right__description--category">모임일</p>
-                    <p className="right__description--content">2021년 05월 13일(목) 외 1회</p>
-                </div>
-                <div className="right__description">
-                    <p className="right__description--category">모임장소</p>
-                    <p className="right__description--content">미정</p>
-                </div>
-                <div className="right__description">
-                    <p className="right__description--category">모임인원</p>
-                    <p className="right__description--content">1000명</p>
-                </div>
-                <div className="right__price">
-                    <p className="right__price--description">멤버십 회원가</p>
-                    <p className="right__price--number">0</p>
-                    <p className="right__price--won">원</p>
-                </div>
-                <div className="right__action">
-                    <button className="right__action--button" type="submit">알림신청</button>
-                    <img className="right__action--arrow" src={icLeftArrow} alt=""></img>
-                    <img className="right__action--arrow" src={icRightArrow} alt=""></img>
-                </div>
-            </div>
-        </DownWrap>
-    );
+  return (
+    <DownWrap>
+      <div className='left'>
+        <p className='left__subTitle'>함께 모여 나누는 인사이트</p>
+        <p className='left__mainTitle'>폴인세미나 5월 라인업 미리보기</p>
+      </div>
+      <div className='center'>
+        <img className='center__image' src={dummyImg}></img>
+      </div>
+      <div className='right'>
+        <div className='right__description'>
+          <p className='right__description--category'>모임일</p>
+          <p className='right__description--content'>
+            2021년 05월 13일(목) 외 1회
+          </p>
+        </div>
+        <div className='right__description'>
+          <p className='right__description--category'>모임장소</p>
+          <p className='right__description--content'>미정</p>
+        </div>
+        <div className='right__description'>
+          <p className='right__description--category'>모임인원</p>
+          <p className='right__description--content'>1000명</p>
+        </div>
+        <div className='right__price'>
+          <p className='right__price--description'>멤버십 회원가</p>
+          <p className='right__price--number'>0</p>
+          <p className='right__price--won'>원</p>
+        </div>
+        <div className='right__action'>
+          <button className='right__action--button' type='submit'>
+            알림신청
+          </button>
+          <img className='right__action--arrow' src={icLeftArrow} alt=''></img>
+          <img className='right__action--arrow' src={icRightArrow} alt=''></img>
+        </div>
+      </div>
+    </DownWrap>
+  );
 };
 
 export default SecondDown;
