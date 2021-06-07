@@ -5,10 +5,10 @@ import SearchBtn from '../assets/icons/searchBtn.svg';
 
 const UpHeader = styled.header`
   position: fixed;
-  top: -10vh;
+  top: -28px;
   left: 0;
   width: 100%;
-  height: 18vh;
+  height: 83px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,15 +20,15 @@ const UpHeader = styled.header`
 
 const DownHeader = styled.header`
   position: fixed;
-  background-color: ${(props) => props.theme.textWhite};
-  top: 8vh;
+  top: 55px;
   left: 0;
   width: 100%;
-  height: 10vh;
+  height: 83px;
+  z-index: 10;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1;
+  background-color: ${(props) => props.theme.textWhite};
   color: ${(props) => props.theme.textBlack};
 `;
 
@@ -84,7 +84,9 @@ const Header = () => {
       <UpHeader>
         <List>
           <Item current={true}>폴인멤버십</Item>
-          <Item current={false}>오직 폴인에서만! 1천 여개 콘텐츠를 무제한으로!</Item>
+          <Item current={false}>
+            오직 폴인에서만! 1천 여개 콘텐츠를 무제한으로!
+          </Item>
         </List>
       </UpHeader>
       <DownHeader>
