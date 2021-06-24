@@ -170,7 +170,7 @@ const SecondDown = ( lineupData ) => {
         <div className='right__description'>
           <p className='right__description--category'>모임일</p>
           <p className='right__description--content'>
-            2021년 05월 13일(목) 외 1회
+            {lineupData.lineup[0].date}
           </p>
         </div>
         <div className='right__description'>
