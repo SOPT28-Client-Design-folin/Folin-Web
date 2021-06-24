@@ -15,18 +15,19 @@ const SecondWrap = Styled.div`
 const Second = () => {
   const [userData, setUserData] = React.useState(null);
 
-  setData() => {
+  React.useEffect(() => {
     (async () => {
       const data = await getSecondPageData();
       setUserData(data);
+      console.log(userData)
     })();
-  };
+  }, [userData]);
 
   return (
     <SecondWrap>
-      <SecondUp bannerData={userData.main} />
+      <SecondUp bannerData={userData} />
       <SecondMiddle />
-      <SecondDown lineupData={userData.lineup} />
+      <SecondDown lineupData={userData} />
     </SecondWrap>
   );
 };

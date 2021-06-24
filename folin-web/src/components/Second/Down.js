@@ -156,7 +156,7 @@ const DownWrap = Styled.div`
 
 `;
 
-const SecondDown = () => {
+const SecondDown = ( lineupData ) => {
   return (
     <DownWrap>
       <div className='left'>
