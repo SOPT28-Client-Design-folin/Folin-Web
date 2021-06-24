@@ -1,11 +1,7 @@
 import React from 'react';
 
 const Second = () => {
-    return (
-        <div>
-            
-        </div>
-    );
+  return <div></div>;
 };
 
 export default Second;

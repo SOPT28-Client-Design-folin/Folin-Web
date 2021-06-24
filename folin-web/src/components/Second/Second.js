@@ -1,8 +1,9 @@
-import React from "react";
-import SecondUp from "./Up";
-import SecondMiddle from "./Middle";
-import SecondDown from "./Down";
-import Styled from "styled-components";
+import React from 'react';
+import SecondUp from './Up';
+import SecondMiddle from './Middle';
+import SecondDown from './Down';
+import Styled from 'styled-components';
+import { getSecondPageData } from '../../libs/api';
 
 const SecondWrap = Styled.div`
     display: flex;
@@ -12,11 +13,20 @@ const SecondWrap = Styled.div`
 `;
 
 const Second = () => {
+  const [userData, setUserData] = React.useState(null);
+
+  setData() => {
+    (async () => {
+      const data = await getSecondPageData();
+      setUserData(data);
+    })();
+  };
+
   return (
     <SecondWrap>
-      <SecondUp />
+      <SecondUp bannerData={userData.main} />
       <SecondMiddle />
-      <SecondDown />
+      <SecondDown lineupData={userData.lineup} />
     </SecondWrap>
   );
 };

@@ -1,7 +1,7 @@
-import React from "react";
-import Styled from "styled-components";
-import BannerImageLeft from "../../assets/icons/dummyImg.jpeg";
-import BannerImageRight from "../../assets/icons/dummyImg2.jpg";
+import React from 'react';
+import Styled from 'styled-components';
+import BannerImageLeft from '../../assets/icons/dummyImg.jpeg';
+import BannerImageRight from '../../assets/icons/dummyImg2.jpg';
 
 const SecondUpWrap = Styled.div`
     display: flex;
@@ -93,10 +93,10 @@ const SecondUpWrap = Styled.div`
         &__right {
             width: 76.8rem;
             height: 49.5rem;
-            background: url(${BannerImageRight});
+            background: url(${(props) => props.bannerImg});
             background-position: center;
             background-size: cover;
-        }
+        }.bind(this)
     }
 
     .indicator {
@@ -199,7 +199,7 @@ const SecondUpWrap = Styled.div`
             &__right {
                 width: 56.8rem;
                 height: 31.7rem;
-                background: url(${BannerImageRight});
+                background: url(${(props) => props.bannerImg});
                 background-position: center;
                 background-size: cover;
             }
@@ -235,32 +235,28 @@ const SecondUpWrap = Styled.div`
     }
 `;
 
-const SecondUp = () => {
+const SecondUp = (bannerData) => {
   return (
-    <SecondUpWrap>
-      <div className='banner'>
-        <div className='banner__left'>
-          <div className='banner__left--description'>
-            <p className='banner__left--description--left'>
-              AI 비즈니스, 분야와 국가를 넘어 확장하다
-            </p>
-            <p className='banner__left--description--right'>폴인세미나</p>
+    <SecondUpWrap bannerImg={bannerData.main_image}>
+      <div className="banner">
+        <div className="banner__left">
+          <div className="banner__left--description">
+            <p className="banner__left--description--left">AI 비즈니스, 분야와 국가를 넘어 확장하다</p>
+            <p className="banner__left--description--right">폴인세미나</p>
           </div>
-          <p className='banner__left--title'>
-            뤼이드 어떻게 100대 AI기업이 되었나
-          </p>
-          <p className='banner__left--assigneesTitle'>신청자</p>
-          <p className='banner__left--assigneesCount'>669명</p>
-          <button className='banner__left--button' type='submit'>
+          <p className="banner__left--title">뤼이드 어떻게 100대 AI기업이 되었나</p>
+          <p className="banner__left--assigneesTitle">신청자</p>
+          <p className="banner__left--assigneesCount">669명</p>
+          <button className="banner__left--button" type="submit">
             신청하기
           </button>
         </div>
-        <div className='banner__right'></div>
+        <div className="banner__right"></div>
       </div>
-      <div className='indicator'>
-        <div className='indicator--one'></div>
-        <div className='indicator--two'></div>
-        <div className='indicator--three'></div>
+      <div className="indicator">
+        <div className="indicator--one"></div>
+        <div className="indicator--two"></div>
+        <div className="indicator--three"></div>
       </div>
     </SecondUpWrap>
   );
